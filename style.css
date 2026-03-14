@@ -11,7 +11,8 @@ body {
     width: auto;
     height: 80vh;
     margin: 0;
-    border: 50px solid rgb(13, 15, 18);
+    border: solid rgb(13, 15, 18);
+    border-width: clamp(10px, 25px, 50px);
     background: linear-gradient(90deg, #3AB7FF, #A45CFF,#FF4FD8);
     position: relative;
 }
@@ -39,7 +40,7 @@ body {
 }
 
 h1 {
-    font-size: 3.5em;
+    font-size: 3em;
     color: white;
     margin: 0;
     padding: 0;
@@ -65,7 +66,7 @@ h3{
 
 .cards {
     width: 25vw;
-    height: 50vh;
+    height: auto;
     justify-self: center;
     align-items: center;
     text-align: center;
@@ -74,6 +75,7 @@ h3{
     margin-top: 5vh;
     margin-bottom: 5vh;
     padding-top: 5vh;
+    padding-bottom: 5vh;
     color: #3AB7FF;
 }
 
@@ -93,8 +95,8 @@ p {
 
 a {
     font-size: 1.5em;
-    position: relative;
-    top: 5vh;
+    margin-top: 3vh;
+    display: inline-block;
 }
 
 a:link {
@@ -108,4 +110,65 @@ a:visited {
 a:hover {
     color: #FF4FD8;
 }
+
+@media (max-width: 768px) {
+
+    .heroImage {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        gap: 1rem;
+    }
+
+    .heroImg {
+        width: 20vw;
+        height: auto;
+        margin-left: 2vw;
+    }
+
+    #flexText {
+        text-align: center;
+        margin-top: 0;
+    }
+
+    h1 {
+        font-size: 1.75em;
+    }
+    h2 {
+        font-size: 1.25em;
+    }
+    h3 {
+        font-size: 1em;
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .cards {
+        width: 60vw;
+        height: auto;
+        border-radius: 5%;
+    }
+
+    .cardImg {
+        width: 50vw;
+        height: 20vh;
+        margin-bottom: 0;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    a {
+    font-size: 1em;
+
+}
+
+}
+
 
