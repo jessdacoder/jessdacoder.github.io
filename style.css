@@ -151,7 +151,9 @@ a:hover {
     .cards {
         width: 60vw;
         height: auto;
-        border-radius: 5%;
+        border-radius: 25px;
+        padding-left: 5vw;
+        padding-right: 5vw;
     }
 
     .cardImg {
